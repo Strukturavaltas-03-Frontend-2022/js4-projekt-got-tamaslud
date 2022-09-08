@@ -1,0 +1,47 @@
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: GOT;
+  src: url('/fonts/Game\ of\ Thrones.ttf');
+}
+* {
+  box-sizing: border-box;
+  margin: auto;
+}
+::selection {
+  display: none;
+}
+.inactive {
+  pointer-events: none;
+}
+
+body {
+  background-image: url('/assets/site/mapblue.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:rgb(57,57,58);
+  display: flex;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+.characters{
+  color: black;
+  width: 80vw;
+  height: 100vh;
+}
+.details{
+  display: inline;
+  background-color:rgb(57,57,58);
+  font-size: 1em;
+  width: 20vw;
+  height: 100vh;
+}
+h1 {
+  font-family: 'GOT', Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  font-size: 1vw;
+  text-align: center;
+  padding: 20px 0;
+}
+
