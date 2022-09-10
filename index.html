@@ -1,21 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game of Throne Project</title>
     <link rel="stylesheet" href="./css/style.css">
-   
 </head>
+
 <body>
-    <div class="characters"></div>
-    <div class="details">
-        <h1>Game of thrones</h1>
+    <div class="portraits">
+        portraits
+    </div>
+
+    <div class="aside">
+
+        <div class="aside__top">
+            <div class="aside__header">
+                <h1>Game of thrones</h1>
+            </div>
+            <div class="aside__character">
+                <div>
+                    <img class="gotPicture" src="./assets/pictures/jon_snow.jpg" alt="Jon Snow">
+                </div>
+                <div class="character--name">
+                    <span class="char--name">Jon Snow</span>
+                    <span class="char--house">
+                        <img class="char--house" src="./assets/houses/baratheon.png" alt="baratheon">
+                    </span>
+                </div>
+                <div class="character--details">
+                    `Jon is the bastard child of Ned Stark of Winterfell and a unkwnow woman. Soon after his marriage,
+                    Ned
+                    Stark leaved his home to go to fight on the war of the usurper, and returned home carrying a infant
+                    that
+                    was supposedly his own`
+                </div>
+            </div>
+        </div>
+
+        <div class="aside__bottom">
+            <div class="searchbar">
+                <span class="searchbutton">
+                    <button class="btn__search">&gt</i>
+                    </button>
+                </span>
+                <span class="searchicon">
+                    <button class="search__btn" type="submit">B</button>
+                </span>
+                <span class="searchbar">
+                    <input class="search__input" type="text" placeholder="Search for...">
+                </span>
+            </div>
+        </div>
+
     </div>
 
 
-    
+
+    <div class="characters"></div>
+
+
+
     <script type="module" src="./js/main.js"></script>
 </body>
+
 </html>

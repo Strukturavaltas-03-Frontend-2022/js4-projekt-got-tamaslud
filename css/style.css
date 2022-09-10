@@ -17,31 +17,69 @@
   pointer-events: none;
 }
 
+
+
 body {
   background-image: url('/assets/site/mapblue.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-color:rgb(57,57,58);
-  display: flex;
   font-family: Roboto, Arial, Helvetica, sans-serif;
+  /* flex container properties */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
 }
-.characters{
+.portraits{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
   color: black;
   width: 80vw;
   height: 100vh;
 }
-.details{
-  display: inline;
+
+.aside{
+  display: block;
   background-color:rgb(57,57,58);
   font-size: 1em;
   width: 20vw;
   height: 100vh;
 }
-h1 {
-  font-family: 'GOT', Georgia, 'Times New Roman', Times, serif;
+.aside__top{
+  height: 90vh;
   color: white;
+}
+.aside__bottom{
+  height: 10vh;
+}
+.aside__header {
+  font-family: 'GOT', Georgia, 'Times New Roman', Times, serif;
   font-size: 1vw;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
+}
+.character--name{
+  padding: 5px;
+
+}
+.char--name{
+  font-size: 1.2em;
+}
+.char--house{
+  height: 1.5em;
+  float: right;
+}
+.character--details{
+  padding: 5px;
+  font-size: .8em;
+}
+
+
+.gotPicture{
+  width: 20vw;
 }
 
