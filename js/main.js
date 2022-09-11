@@ -66,7 +66,10 @@ const searchCharacter = (searchValue) => {
     }
   });
   if (!found) {
-    console.log('nincs');
+    document.querySelector('.found').classList.remove('hidden');
+    const timeout = setTimeout((() => {
+      document.querySelector('.found').classList.add('hidden');
+    }), 2000);
   }
 };
 

@@ -16,6 +16,9 @@
 .inactive {
   pointer-events: none;
 }
+.hidden {
+  visibility: hidden;
+}
 
 
 
@@ -85,7 +88,7 @@ body {
   color: white;
 }
 .aside__bottom{
-  height: 10vh;
+  height: 15vh;
 }
 .aside__header {
   font-family: 'GOT', Georgia, 'Times New Roman', Times, serif;
@@ -106,7 +109,7 @@ body {
   height: 1.5em;
   float: right;
 }
-.character--details{
+.character--details {
   padding: 5px;
   font-size: .8em;
 }
@@ -134,5 +137,10 @@ body {
 img .searcicon{
   object-fit: cover;
 }
-
+.foundBox{
+  padding: 5px;
+  text-align: center;
+  font-size: .7em;
+  color: yellow;
+}
 
