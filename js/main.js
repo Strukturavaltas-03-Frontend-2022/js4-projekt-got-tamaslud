@@ -9,11 +9,9 @@ fetch('./json/got.json')
         gotChars.push(item);
       }
     }
-    console.log(gotChars);
     sortByNames();
-    console.log(gotChars);
-
     displayPortraits();
+    addPortraitListeners();
   });
 
 const displayPortraits = () => {
@@ -21,13 +19,23 @@ const displayPortraits = () => {
   for (let i = 0; i < gotChars.length; i += 1) {
     const gotChar = gotChars[i];
     const templateChar = `
-    <div class="portraitBox">
-    <p><img src="${gotChar.portrait}" alt="${gotChar.name}"></p>
+    <div class="portraitBox" id="p${i}">
+    <div><img src="${gotChar.portrait}" alt="${gotChar.name}"></d>
     <div class="portraitName">${gotChar.name}</div>
 </div>`;
     portraits.insertAdjacentHTML('beforeend', templateChar);
   }
 };
+
+const addPortraitListeners = () => {
+  const allPortraitBoxes = document.querySelectorAll('.portraitBox');
+  for (let i = 0; i < allPortraitBoxes.length; i += 1) {
+    allPortraitBoxes[i].addEventListener('click', () => {
+      console.log(gotChars[i].name);
+    });
+  }
+};
+
 
 const sortByNames = () => {
   function SortArray(x, y) {
