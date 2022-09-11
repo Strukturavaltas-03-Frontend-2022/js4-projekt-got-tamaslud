@@ -1,5 +1,5 @@
 'use strict'
-const gotChars = [];
+let gotChars = [];
 fetch('./json/got.json')
   .then((response) => response.json())
   .catch((error) => console.error(error, 'error reading character file'))
@@ -9,6 +9,10 @@ fetch('./json/got.json')
         gotChars.push(item);
       }
     }
+    console.log(gotChars);
+    sortByNames();
+    console.log(gotChars);
+
     displayPortraits();
   });
 
@@ -25,4 +29,11 @@ const displayPortraits = () => {
   }
 };
 
-
+const sortByNames = () => {
+  function SortArray(x, y) {
+    if (x.name.split(' ').slice(-1) < y.name.split(' ').slice(-1)) { return -1; }
+    if (x.name.split(' ').slice(-1) > y.name.split(' ').slice(-1)) { return 1; }
+    return 0;
+  }
+  gotChars.sort(SortArray);
+};
