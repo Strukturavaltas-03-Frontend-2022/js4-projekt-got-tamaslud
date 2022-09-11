@@ -1,5 +1,5 @@
 'use strict'
-let gotChars = [];
+const gotChars = [];
 fetch('./json/got.json')
   .then((response) => response.json())
   .catch((error) => console.error(error, 'error reading character file'))
@@ -51,7 +51,34 @@ const diplayDetails = (index) => {
 const addPortraitListeners = () => {
   const allPortraitBoxes = document.querySelectorAll('.portraitBox');
   for (let i = 0; i < allPortraitBoxes.length; i += 1) {
-    allPortraitBoxes[i].addEventListener('click', () => {diplayDetails(i);
-    });
+    allPortraitBoxes[i].addEventListener('click', () => { diplayDetails(i); });
   }
 };
+
+const searchCharacter = (searchValue) => {
+  let found = false;
+  const searchValueLC = searchValue.toLowerCase();
+  gotChars.forEach((element, index) => {
+    const nameLC = element.name.toLowerCase();
+    if (nameLC === searchValueLC) {
+      diplayDetails(index);
+      found = true;
+    }
+  });
+  if (!found) {
+    console.log('nincs');
+  }
+};
+
+const search = () => {
+  const btnSearch = document.querySelector('.btn__search');
+  btnSearch.addEventListener('click', () => {
+    const searchValue = document.querySelector('.search__input').value;
+    if (searchValue !== '') {
+      searchCharacter(searchValue);
+      document.querySelector('.search__input').value = '';
+    }
+  });
+};
+
+search();
