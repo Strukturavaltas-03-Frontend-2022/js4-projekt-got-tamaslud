@@ -26,7 +26,7 @@ body {
   background-image: url('/assets/site/mapblue.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-color:rgb(57,57,58);
+  background-color:rgb(179,182,187);
   font-family: Roboto, Arial, Helvetica, sans-serif;
   /* flex container properties */
   display: flex;
@@ -50,6 +50,25 @@ body {
   height: 14%;
   text-align: center;
 }
+@media screen and (max-width: 600px) {
+  .portraitBox{
+    width: 24%;
+    height: 14%;
+    text-align: center;
+  }
+  .portraits{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-start;
+    color: black;
+    width: 80vw;
+    height: 100vh;
+    padding: 10px 0;
+  }
+}
+
 .portraitBox img{
   border: 2px solid transparent;
   border-radius: 100vW;
