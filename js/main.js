@@ -12,6 +12,7 @@ fetch('./json/got.json')
     sortByNames();
     displayPortraits();
     addPortraitListeners();
+    diplayDetails(0)
   });
 
 const displayPortraits = () => {

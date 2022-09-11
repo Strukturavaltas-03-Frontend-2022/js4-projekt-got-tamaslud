@@ -57,17 +57,27 @@ body {
   border-radius: 100vW;
   width: 50%;
 }
+
+.portraitBox:hover {
+  background: rgba(56, 223, 237, 1.0);
+  background: radial-gradient(ellipse at center, 
+  rgba(56, 56, 56, 1.0), 
+  rgba(56,56,56, 0.5),
+  rgba(56,56,56, 0.0),
+  rgba(56,56,56, 0.0));
+}
 .portraitName{
   font-size: .7em;
   text-align: center;
 }
 
+/*aside formatting */
 
 .aside{
   display: block;
   background-color:rgb(57,57,58);
   font-size: 1em;
-  width: 20vw;
+  width: 200px;
   height: 100vh;
 }
 .aside__top{
@@ -101,9 +111,28 @@ body {
   font-size: .8em;
 }
 .gotPicture{
-  width: 20vw;
+  width: 200px;
 }
 .searchBar{
-  width: 80%;
+  height: 3em;
+  padding: 0;
+  background-color: white;
+  vertical-align: bottom;
+
 }
+.searchButton{
+  padding: 0 0 0 5px;
+  width: 20%;
+  height: 2em;
+}
+
+.search__input{
+  width: 70%;
+  height: 2.45em;
+
+}
+img .searcicon{
+  object-fit: cover;
+}
+
 
