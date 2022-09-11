@@ -9,7 +9,8 @@
     "portrait": "assets/ned.png",
     "picture": "assets/pictures/ned_stark.jpg",
     "bio":"Eddard 'Ned' Stark is the head of House Stark, Lord of Winterfell, and Warden of the North. He is a friend to King Robert Baratheon, whom he was raised with and helped to win the Iron Throne, and is eventually named his Hand. ",
-    "house": "stark"
+    "house": "stark",
+    "dead" : true
   },
   {
     "name": "Arya Stark",
