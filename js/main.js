@@ -1,19 +1,5 @@
 'use strict'
 const gotChars = [];
-fetch('./json/got.json')
-  .then((response) => response.json())
-  .catch((error) => console.error(error, 'error reading character file'))
-  .then((data) => {
-    for (const item of data) {
-      if (!item.dead === true) {
-        gotChars.push(item);
-      }
-    }
-    sortByNames();
-    displayPortraits();
-    addPortraitListeners();
-    diplayDetails(0)
-  });
 
 const displayPortraits = () => {
   const portraits = document.querySelector('.portraits');
@@ -83,5 +69,20 @@ const search = () => {
     }
   });
 };
+
+fetch('./json/got.json')
+  .then((response) => response.json())
+  .catch((error) => console.error(error, 'error reading character file'))
+  .then((data) => {
+    for (const item of data) {
+      if (!item.dead === true) {
+        gotChars.push(item);
+      }
+    }
+    sortByNames();
+    displayPortraits();
+    addPortraitListeners();
+    diplayDetails(0);
+  });
 
 search();

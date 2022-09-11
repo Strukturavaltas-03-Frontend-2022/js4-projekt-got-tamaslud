@@ -19,9 +19,6 @@
 .hidden {
   visibility: hidden;
 }
-
-
-
 body {
   background-image: url('/assets/site/mapblue.jpg');
   background-repeat: no-repeat;
@@ -32,7 +29,6 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-
 }
 .portraits{
   display: flex;
@@ -53,22 +49,11 @@ body {
 @media screen and (max-width: 600px) {
   .portraitBox{
     width: 24%;
-    height: 14%;
-    text-align: center;
   }
   .portraits{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
     align-content: flex-start;
-    color: black;
-    width: 80vw;
-    height: 100vh;
-    padding: 10px 0;
   }
 }
-
 .portraitBox img{
   border: 2px solid transparent;
   border-radius: 100vW;
@@ -79,7 +64,6 @@ body {
   border-radius: 100vW;
   width: 50%;
 }
-
 .portraitBox:hover {
   background: rgba(56, 223, 237, 1.0);
   background: radial-gradient(ellipse at center, 
@@ -94,7 +78,6 @@ body {
 }
 
 /*aside formatting */
-
 .aside{
   display: block;
   background-color:rgb(57,57,58);
@@ -118,7 +101,6 @@ body {
 .character--name{
   height: 3em;
   padding: 5px;
-
 }
 .char--name{
   font-size: 0.9em;
@@ -140,18 +122,15 @@ body {
   padding: 0;
   background-color: white;
   vertical-align: bottom;
-
 }
 .searchButton{
   padding: 0 0 0 5px;
   width: 20%;
   height: 2em;
 }
-
 .search__input{
   width: 70%;
   height: 2.45em;
-
 }
 img .searcicon{
   object-fit: cover;
@@ -162,4 +141,3 @@ img .searcicon{
   font-size: .7em;
   color: yellow;
 }
-
