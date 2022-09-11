@@ -84,11 +84,13 @@ body {
   padding: 10px 0;
 }
 .character--name{
+  height: 3em;
   padding: 5px;
 
 }
 .char--name{
-  font-size: 1.2em;
+  font-size: 0.9em;
+  vertical-align: middle;
 }
 .char--house{
   height: 1.5em;

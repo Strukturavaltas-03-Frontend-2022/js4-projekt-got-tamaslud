@@ -9,8 +9,7 @@
     "portrait": "assets/ned.png",
     "picture": "assets/pictures/ned_stark.jpg",
     "bio":"Eddard 'Ned' Stark is the head of House Stark, Lord of Winterfell, and Warden of the North. He is a friend to King Robert Baratheon, whom he was raised with and helped to win the Iron Throne, and is eventually named his Hand. ",
-    "house": "stark",
-    "dead" : true
+    "house": "stark"
   },
   {
     "name": "Arya Stark",
@@ -144,7 +143,8 @@
     "portrait": "assets/jorah.png",
     "pictures": "assets/pictures/jorah_mormont",
     "house": "mormont",
-    "bio": "An exiled knight, former head of House Mormont and lord of Bear Island. He fled Westeros to escape execution for trading in slaves and took up work as a mercenary in the Free Cities, eventually entering the service of the last Targaryens."
+    "bio": "An exiled knight, former head of House Mormont and lord of Bear Island. He fled Westeros to escape execution for trading in slaves and took up work as a mercenary in the Free Cities, eventually entering the service of the last Targaryens.",
+    "dead": true
   },
   {
     "name": "Viserys Targaryen",

@@ -27,16 +27,6 @@ const displayPortraits = () => {
   }
 };
 
-const addPortraitListeners = () => {
-  const allPortraitBoxes = document.querySelectorAll('.portraitBox');
-  for (let i = 0; i < allPortraitBoxes.length; i += 1) {
-    allPortraitBoxes[i].addEventListener('click', () => {
-      console.log(gotChars[i].name);
-    });
-  }
-};
-
-
 const sortByNames = () => {
   function SortArray(x, y) {
     if (x.name.split(' ').slice(-1) < y.name.split(' ').slice(-1)) { return -1; }
@@ -44,4 +34,23 @@ const sortByNames = () => {
     return 0;
   }
   gotChars.sort(SortArray);
+};
+
+const diplayDetails = (index) => {
+  const asidePicture = document.querySelector('.gotPicture');
+  const asideName = document.querySelector('.char--name');
+  const asideHouse = document.querySelector('.char--houseimg');
+  const asideDetails = document.querySelector('.character--details');
+  asidePicture.src = gotChars[index].picture;
+  asideName.innerText = `${gotChars[index].name}`;
+  asideHouse.src = `./assets/houses/${gotChars[index].house}.PNG`;
+  asideDetails.innerText = `${gotChars[index].bio}`;
+};
+
+const addPortraitListeners = () => {
+  const allPortraitBoxes = document.querySelectorAll('.portraitBox');
+  for (let i = 0; i < allPortraitBoxes.length; i += 1) {
+    allPortraitBoxes[i].addEventListener('click', () => {diplayDetails(i);
+    });
+  }
 };
