@@ -1,5 +1,5 @@
 'use strict'
-const gotChars = [];
+let gotChars = [];
 
 const displayPortraits = () => {
   const portraits = document.querySelector('.portraits');
@@ -70,19 +70,28 @@ const search = () => {
   });
 };
 
-fetch('./json/got.json')
-  .then((response) => response.json())
-  .catch((error) => console.error(error, 'error reading character file'))
-  .then((data) => {
-    for (const item of data) {
-      if (!item.dead === true) {
-        gotChars.push(item);
-      }
-    }
-    sortByNames();
-    displayPortraits();
-    addPortraitListeners();
-    diplayDetails(0);
-  });
+const errorJSON = () => {
+  const portraits = document.querySelector('.portraits');
+  const templateChar = '<div class="error">error loading data</div>';
+  portraits.insertAdjacentHTML('beforeend', templateChar);
+};
 
-search();
+function success(response) {
+  gotChars = response.filter((item) => !item.dead === true);
+  sortByNames();
+  displayPortraits();
+  addPortraitListeners();
+  diplayDetails(0);
+  search();
+}
+
+async function request(url, options = {}) {
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    success(result);
+  } catch (error) {
+    errorJSON();
+  }
+}
+request('./json/got.json');
