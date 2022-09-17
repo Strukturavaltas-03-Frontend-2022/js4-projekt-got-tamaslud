@@ -55,7 +55,7 @@ body {
   border-radius: 100vW;
   width: 60px;
 }
-.portraitBox:hover img{
+.portraitBox img.selected{
   border: 2px solid white;
   border-radius: 100vW;
   width: 60px;

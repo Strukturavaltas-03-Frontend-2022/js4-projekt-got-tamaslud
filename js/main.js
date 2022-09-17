@@ -24,6 +24,14 @@ const sortByNames = () => {
   gotChars.sort(SortArray);
 };
 
+const setImgSelected = (index) => {
+  const portraits = document.querySelectorAll('.portraitBox img');
+  for (let i = 0; i < portraits.length; i += 1) {
+    portraits[i].classList.remove('selected');
+  }
+  portraits[index].classList.add('selected');
+};
+
 const diplayDetails = (index) => {
   const asidePicture = document.querySelector('.gotPicture');
   const asideName = document.querySelector('.char--name');
@@ -38,7 +46,10 @@ const diplayDetails = (index) => {
 const addPortraitListeners = () => {
   const allPortraitBoxes = document.querySelectorAll('.portraitBox');
   for (let i = 0; i < allPortraitBoxes.length; i += 1) {
-    allPortraitBoxes[i].addEventListener('click', () => { diplayDetails(i); });
+    allPortraitBoxes[i].addEventListener('click', () => { 
+      diplayDetails(i);
+      setImgSelected(i);
+    });
   }
 };
 
@@ -48,6 +59,7 @@ const searchCharacter = (searchValue) => {
   gotChars.forEach((element, index) => {
     const nameLC = element.name.toLowerCase();
     if (nameLC === searchValueLC) {
+      setImgSelected(index);
       diplayDetails(index);
       found = true;
     }
@@ -83,6 +95,7 @@ function success(response) {
   displayPortraits();
   addPortraitListeners();
   diplayDetails(0);
+  setImgSelected(0);
   search();
 }
 
