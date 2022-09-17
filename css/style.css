@@ -50,23 +50,15 @@ body {
   height: 14%;
   text-align: center;
 }
-@media screen and (max-width: 600px) {
-  .portraitBox{
-    width: 24%;
-  }
-  .portraits{
-    align-content: flex-start;
-  }
-}
 .portraitBox img{
   border: 2px solid transparent;
   border-radius: 100vW;
-  width: 50%;
+  width: 60px;
 }
 .portraitBox:hover img{
   border: 2px solid white;
   border-radius: 100vW;
-  width: 50%;
+  width: 60px;
 }
 .portraitBox:hover {
   background: rgba(56, 223, 237, 1.0);
@@ -144,4 +136,13 @@ img .searcicon{
   text-align: center;
   font-size: .7em;
   color: yellow;
+}
+
+@media screen and (max-width: 650px) {
+  .portraitBox{
+    width: 24%;
+  }
+  .portraits{
+    align-content: flex-start;
+  }
 }
